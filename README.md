@@ -28,7 +28,7 @@ Antes de ejecutar el proyecto asegúrate de tener instalado:
 * Composer
 * Node.js
 * MySQL
-* Servidor local (Laragon, XAMPP o similar)
+* Servidor local (Laragon)
 
 ---
 
