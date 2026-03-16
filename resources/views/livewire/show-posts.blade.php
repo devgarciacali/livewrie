@@ -17,14 +17,47 @@
                     <!-- HEADER -->
                     <thead class="bg-gray-50">
                         <tr>
-                            <th class="px-6 py-3 text-left text-xs font-semibold text-gray-500 uppercase">
+                            <th class="flex items-center cursor-pointer px-6 py-3 text-left text-xs font-semibold text-gray-500 uppercase"
+                                wire:click="order('id')">
                                 ID
+                                @if ($sort == 'id')
+                                    @if ($direction == 'asc')
+                                        <i class="fas fa-sort-alpha-up-alt float-right mt-1"></i>
+                                    @else
+                                        <i class="fas fa-sort-alpha-down-alt float-right mt-1"></i>
+                                    @endif
+                                @else
+                                    <i class="fas fa-sort float-right mt-1"></i>
+                                @endif
+
                             </th>
-                            <th class="px-6 py-3 text-left text-xs font-semibold text-gray-500 uppercase">
+                            <th class="cursor-pointer px-6 py-3 text-left text-xs font-semibold text-gray-500 uppercase"
+                                wire:click="order('title')">
                                 TITLE
+                                {{-- SORT --}}
+                                @if ($sort == 'title')
+                                    @if ($direction == 'asc')
+                                        <i class="fas fa-sort-alpha-up-alt float-right mt-1"></i>
+                                    @else
+                                        <i class="fas fa-sort-alpha-down-alt float-right mt-1"></i>
+                                    @endif
+                                @else
+                                    <i class="fas fa-sort float-right mt-1"></i>
+                                @endif
                             </th>
-                            <th class="px-6 py-3 text-left text-xs font-semibold text-gray-500 uppercase">
+                            <th class="cursor-pointer px-6 py-3 text-left text-xs font-semibold text-gray-500 uppercase"
+                                wire:click="order('content')">
                                 CONTENT
+                                {{-- SORT --}}
+                                @if ($sort == 'content')
+                                    @if ($direction == 'asc')
+                                        <i class="fas fa-sort-alpha-up-alt float-right mt-1"></i>
+                                    @else
+                                        <i class="fas fa-sort-alpha-down-alt float-right mt-1"></i>
+                                    @endif
+                                @else
+                                    <i class="fas fa-sort float-right mt-1"></i>
+                                @endif
                             </th>
                             <th class="px-6 py-3 text-right text-xs font-semibold text-gray-500 uppercase">
                                 Action
