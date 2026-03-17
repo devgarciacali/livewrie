@@ -26,8 +26,7 @@ class ShowPosts extends Component
             ->orderBy($this->sort, $this->direction)
             ->get();
 
-        return view('livewire.show-posts', compact('posts'))
-            ->layout('layouts.app');
+        return view('livewire.show-posts', compact('posts'));
     }
 
     public function order($sort)

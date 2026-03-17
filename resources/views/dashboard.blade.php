@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-app-layouts>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Dashboard') }}
@@ -10,4 +10,4 @@
             @livewire('show-posts', ['title' => 'este es un titulo de prueba'])
         </div>
     </div>
-</x-app-layout>
+</x-app-layouts>
