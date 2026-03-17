@@ -7,17 +7,16 @@
         <x-slot name="title">
             CREAR NUEVO POST
         </x-slot>
-
         <x-slot name="content">
             <div class="mb-4">
                 <x-label value="Titulo del post" />
-                <x-input type="text" class="w-full" wire:model.defer="title" />
-                
+                <x-input type="text" class="w-full" wire:model.live="title" />
+                <x-input-error for="title" />
             </div>
             <div class="mb-4">
                 <x-label value="Contenido del post" />
-                <textarea wire:model.defer="content" class="form-control w-full rounded-lg" rows="6"></textarea>
-               
+                <textarea wire:model.live="content" class="form-control w-full rounded-lg" rows="6"></textarea>
+                <x-input-error for="content" />
             </div>
         </x-slot>
 
