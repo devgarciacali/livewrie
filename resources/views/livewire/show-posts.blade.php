@@ -7,8 +7,10 @@
     {{-- TABLE --}}
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
-        <div class="px-6 py-4">
-            <x-input type="text" class="w-full" placeholder="Escriba que es lo que busca" wire:model.live="search" />
+        <div class="px-6 py-4 flex items-center">
+            <x-input type="text" class="flex-1 mr-4" placeholder="Escriba que es lo que busca" wire:model.live="search" />
+            {{-- component de crear post button --}}
+            @livewire('create-post')
         </div>
 
         <x-tabla>
@@ -17,7 +19,7 @@
                     <!-- HEADER -->
                     <thead class="bg-gray-50">
                         <tr>
-                            <th class="flex items-center cursor-pointer px-6 py-3 text-left text-xs font-semibold text-gray-500 uppercase"
+                            <th class="w-24 items-center cursor-pointer px-6 py-3 text-left text-xs font-semibold text-gray-500 uppercase"
                                 wire:click="order('id')">
                                 ID
                                 @if ($sort == 'id')
