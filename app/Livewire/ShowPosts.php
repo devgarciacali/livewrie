@@ -13,6 +13,11 @@ class ShowPosts extends Component
 
     public $direction = 'desc';
 
+    protected $listeners = [
+        // ESCUCHAR EL EVENTO RENDER
+        'render'
+    ];
+
     public function render()
     {
         $posts = Post::where('id', 'like', '%' . $this->search . '%')

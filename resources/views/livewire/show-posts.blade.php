@@ -11,6 +11,7 @@
             <x-input type="text" class="flex-1 mr-4" placeholder="Escriba que es lo que busca" wire:model.live="search" />
             {{-- component de crear post button --}}
             @livewire('create-post')
+            {{-- fin component --}}
         </div>
 
         <x-tabla>
