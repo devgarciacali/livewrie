@@ -9,19 +9,20 @@ use Livewire\Component;
 class CreatePost extends Component
 {   
 
-    public $open = false;
+    public $open = true;
     public $title, $content;
+
     // reglas de validacion
     protected $rules = [
-        'title' => 'required|max:10',
-        'content' => 'required|max:100'    
+        'title' => 'required',
+        'content' => 'required'    
     ];
 
     // metodo para validar los campos cuando cambian el valor en el input o textarea
-    public function updated($propertyName)
-    {
-        $this->validateOnly($propertyName);
-    }
+    // public function updated($propertyName)
+    // {
+    //     $this->validateOnly($propertyName);
+    // }
 
 
     // metodo para guardar el post
@@ -29,10 +30,7 @@ class CreatePost extends Component
     {
         $this->validate($this->rules, [
             'title.required' => 'El titulo no tiene que estar vacio',
-            'title.max' => 'El titulo no puede tener mas de 100 caracteres',
             'content.required' => 'El contenido no tiene que estar vacio',
-            'content.max' => 'El contenido no puede tener mas de 100 caracteres'
-            
         ]);
 
         Post::create([
