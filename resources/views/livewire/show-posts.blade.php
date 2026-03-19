@@ -62,6 +62,11 @@
                                     <i class="fas fa-sort float-right mt-1"></i>
                                 @endif
                             </th>
+                            <th>
+                                <span class="px-6 py-3 text-left text-xs font-semibold text-gray-500 uppercase">
+                                    img
+                                </span>
+                            </th>
                             <th class="px-6 py-3 text-right text-xs font-semibold text-gray-500 uppercase">
                                 Action
                             </th>
@@ -87,6 +92,13 @@
                                         {{ $post->content }}
                                     </div>
                                 </td>
+
+                                 <td class="px-6 py-4 text-sm text-gray-700">
+                                    <div class="text-sm font-medium text-gray-900">
+                                        <img class="mb-4 w-[1/1]" src="{{ asset('storage/' . $post->image) }}" alt="">
+                                    </div>
+                                </td>
+
                                 <td class="px-6 py-4 text-right text-sm">
                                     <a href="" class="text-yellow-400 hover:text-yellow-700 flex">✏️ Edit</a>
                                 </td>
