@@ -99,7 +99,7 @@
                                     </div>
                                 </td>
 
-                                <td class="px-6 py-4 text-right text-sm">
+                                <td class="px-6 py-4 text-sm">
                                    @livewire('edit-post', ['post' => $post], key($post->id))
                                 </td>
                             </tr>

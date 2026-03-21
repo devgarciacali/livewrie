@@ -1,9 +1,9 @@
 <div>
-    <x-danger-button wire:click="$set('open', true)">
+    <x-danger-button wire:click.prevent="open=true">
         Crear Nuevo post
     </x-danger-button>
 
-    <x-dialog-modal wire:model="open">
+    <x-dialog-modal wire:model.live="open">
         <x-slot name="title">
             CREAR NUEVO POST
         </x-slot>
@@ -34,7 +34,7 @@
                 <a class="cursor-pointer">
                     <label class="sr-only">Seleccione una imagen</label>
                 </a>
-                <input type="file" wire:model="image" id="{{ $indetificator }}"
+                <input type="file" wire:model.defer="image" id="{{ $indetificator }}"
                     class="block w-full bg-layer border border-layer-line rounded-lg text-sm text-foreground placeholder:text-muted-foreground-1 focus:z-10 focus:outline-hidden focus:border-primary-focus focus:ring-1 focus:ring-primary-focus disabled:opacity-50 disabled:pointer-events-none file:bg-surface file:border-0 file:me-4 file:py-3 file:px-4 cursor-pointer" />
 
                 <x-input-error for="image" />
@@ -42,7 +42,7 @@
         </x-slot>
 
         <x-slot name="footer">
-            <x-secondary-button wire:click="$set('open', false)">
+            <x-secondary-button wire:click.prevent="open=false">
                 Cancelar
             </x-secondary-button>
 
