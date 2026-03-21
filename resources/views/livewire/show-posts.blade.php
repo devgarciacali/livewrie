@@ -100,7 +100,7 @@
                                 </td>
 
                                 <td class="px-6 py-4 text-right text-sm">
-                                    <a href="" class="text-yellow-400 hover:text-yellow-700 flex">✏️ Edit</a>
+                                   @livewire('edit-post', ['post' => $post], key($post->id))
                                 </td>
                             </tr>
                         @endforeach

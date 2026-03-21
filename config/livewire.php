@@ -183,6 +183,10 @@ return [
     |   - 'mfc'   : Multi-file component (directory with class, view, js, css)
     |
     */
+    
+    /**
+     * CONFIGURACION DE LIVEWIRE PARA CREAR COMPONENTES CLASICOS
+     */
 
     'make_command' => [
         'type' => 'class',
