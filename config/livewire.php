@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'class_namespace' => 'App\\Livewire',
+   'class_namespace' => 'App\\Livewire',
 
     /*
     |---------------------------------------------------------------------------
@@ -38,7 +38,7 @@ return [
     |
     */
 
-    'layout' => 'components.layouts.app',
+    'layout' => 'layouts.app',
 
     /*
     |---------------------------------------------------------------------------
@@ -170,6 +170,23 @@ return [
     */
 
     'pagination_theme' => 'tailwind',
+
+    /*
+    |---------------------------------------------------------------------------
+    | Make Command Configuration
+    |---------------------------------------------------------------------------
+    |
+    | Configure the default behavior of the `php artisan make:livewire` command.
+    | The 'type' option determines the component structure:
+    |   - 'class' : Separate class (app/Livewire/) + view (resources/views/livewire/)
+    |   - 'sfc'   : Single-file component (view + class in one file)
+    |   - 'mfc'   : Multi-file component (directory with class, view, js, css)
+    |
+    */
+
+    'make_command' => [
+        'type' => 'class',
+    ],
 
     /*
     |---------------------------------------------------------------------------
