@@ -25,6 +25,7 @@ Este proyecto fue desarrollado utilizando las siguientes tecnologías:
 Antes de ejecutar el proyecto asegúrate de tener instalado:
 
 * PHP 8.x
+* Livewire 4.x
 * Composer
 * Node.js
 * MySQL
